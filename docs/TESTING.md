@@ -1,5 +1,7 @@
 # Testing
 
+Current suite: 20 Playwright E2E tests, 47 Vitest tests and 14 unit files.
+
 ## Test pyramid
 
 | Layer | Tool | What it covers |
