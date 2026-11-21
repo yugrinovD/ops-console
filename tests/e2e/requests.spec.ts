@@ -21,6 +21,7 @@ test("request audit opens a sheet with an exact Jaeger waterfall", async ({
 test("audit filters narrow the table via the BFF", async ({ page }) => {
   await login(page);
   await page.goto("/requests");
+  await expect(page.locator("tbody tr")).toHaveCount(3);
   await page.getByPlaceholder("request_id или key_prefix…").fill("e2e-request-0002");
   await expect(page.locator("tbody tr")).toHaveCount(1);
   await expect(page.getByText("e2e-request-0002")).toBeVisible();
