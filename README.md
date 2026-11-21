@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/yugrinovD/ops-console/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/yugrinovD/ops-console/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/yugrinovD/ops-console)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/yugrinovD/ops-console?sort=semver)](https://github.com/yugrinovD/ops-console/releases)
 ![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)
 
 **Веб-консоль для gogate и lmlog: метрики, streaming playground, ключи и квоты, разбор логов и трейсы.**
@@ -18,7 +19,7 @@
 same-origin `/api/*`; admin-токены, ключи провайдеров и токены lmlog остаются на
 сервере.
 
-[English version](README.en.md)
+[English version](README.en.md) · [Changelog](CHANGELOG.md)
 
 ![Dashboard](docs/screenshots/dashboard.jpg)
 
