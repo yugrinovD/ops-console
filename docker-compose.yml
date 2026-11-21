@@ -1,0 +1,26 @@
+name: ops-console
+
+services:
+  console:
+    build: .
+    image: ops-console:local
+    restart: unless-stopped
+    ports:
+      - "${CONSOLE_PORT:-3100}:3000"
+    env_file: .env
+    environment:
+      CONSOLE_DATA_DIR: /data
+      CONSOLE_ORIGIN: ${CONSOLE_ORIGIN:-http://localhost:3100}
+      NODE_ENV: production
+    volumes:
+      - console-data:/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+
+volumes:
+  console-data:
